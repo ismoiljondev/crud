@@ -34,7 +34,7 @@ const App: React.FC = () => {
         onAddProduct={loadProducts}
         selectedCategory={selectedCategory}
       />
-      <div className="container mx-auto p-4 flex justify-end flex-col items-end gap-3">
+      <div className="container mx-auto p-4 flex flex-col gap-3">
         <div>
           <select
             value={selectedCategory}

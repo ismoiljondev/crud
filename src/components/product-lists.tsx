@@ -59,13 +59,19 @@ const ProductList: React.FC<ProductListProps> = ({
                                 <div className="flex space-x-2 mt-2">
                                     <Button
                                         variant="destructive"
-                                        onClick={() => openDialog(product)}
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            openDialog(product)
+                                        }}
                                     >
                                         Delete
                                     </Button>
                                     <Button
                                         variant="default"
-                                        onClick={() => onEditProduct(product)}
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            onEditProduct(product)
+                                        }}
                                     >
                                         Edit
                                     </Button>
